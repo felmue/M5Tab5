@@ -1,0 +1,19 @@
+{
+    "name": "M5Tab5",
+    "description": "Library for M5Tab5",
+    "keywords": "M5Stack,M5Tab5",
+    "authors": {
+        "name": "GWENDESIGN"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/felmue/M5Tab5.git"
+    },
+    "dependencies": {
+        "M5Unified": "*",
+        "M5GFX": "*"
+    },
+    "version": "1.0.0",
+    "frameworks": "arduino",
+    "platforms": "espressif32"
+}
