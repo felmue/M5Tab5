@@ -4,7 +4,7 @@
 
 ### SKU:K145
 
-Basic library for M5Stack M5Tab5 Board
+Basic library for M5Stack M5Tab5 Board (unofficial)
 
 ## Acknowledgments
 
