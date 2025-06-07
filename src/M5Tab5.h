@@ -34,9 +34,10 @@ public:
     void clearRtcIrqFlags();
     void enableRtcIrq(uint8_t bitmap);
     void disableRtcIrq();
+    uint8_t readRtcReg(uint8_t reg);
 
-    // setRFPath
-    // setSpeakerEnable
+    void setRFPath(bool l_int_h_ext);
+    void setSpeakerEnable(bool enable);
     void setExt5VEnable(bool enable);
     void setStamp5VEnable(bool enable);
     // resetLCD

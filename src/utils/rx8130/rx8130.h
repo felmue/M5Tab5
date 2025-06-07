@@ -18,6 +18,7 @@ public:
 
     bool begin();
 
+    void initBat();
     void setTime(struct tm *time);
     void getTime(struct tm *time);
     void setAlarmTime(struct tm *time);
@@ -26,4 +27,5 @@ public:
     void clearIrqFlags();
     void enableIrq(uint8_t bitmap);
     void disableIrq();
+    uint8_t readReg(uint8_t reg);
 };

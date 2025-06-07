@@ -63,7 +63,7 @@ void M5_TAB5::rx8130_init(bool clearAndDisableRTCInterrupt)
     if (!RX8130.begin()) {
         ESP_LOGE(TAG, "rx8130 init failed!");
     } else {
-        ESP_LOGE(TAG, "rx8130 init OK!");
+        RX8130.initBat();
         if(clearAndDisableRTCInterrupt == true) {
             RX8130.disableIrq();
             RX8130.clearIrqFlags();
@@ -111,9 +111,24 @@ void M5_TAB5::disableRtcIrq()
     RX8130.disableIrq();
 }
 
+uint8_t M5_TAB5::readRtcReg(uint8_t reg)
+{
+    return RX8130.readReg(reg);
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                  IO EXT A                                  */
 /* -------------------------------------------------------------------------- */
+void M5_TAB5::setRFPath(bool l_int_h_ext)
+{
+    _io_expander_a->digitalWrite(0, l_int_h_ext);
+}
+
+void M5_TAB5::setSpeakerEnable(bool enable)
+{
+    _io_expander_a->digitalWrite(1, enable);
+}
+
 void M5_TAB5::setExt5VEnable(bool enable)
 {
     _io_expander_a->digitalWrite(2, enable);
